@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="dist/scripts.js" type="module"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Resume Builder</h1>
+    <form id="resumeForm" class="form-container">
+      <h2>Personal Information</h2>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="address" placeholder="Address" required />
+
+      <h2>Education</h2>
+      <input type="text" id="degree" placeholder="Degree" required />
+      <input type="text" id="school" placeholder="School Name" required />
+      <input type="text" id="graduationYear" placeholder="Graduation Year" required />
+
+      <h2>Work Experience</h2>
+      <input type="text" id="jobTitle" placeholder="Job Title" required />
+      <input type="text" id="company" placeholder="Company" required />
+      <input type="text" id="workDates" placeholder="Dates Worked" required />
+      <textarea id="jobDescription" placeholder="Description of Role and Achievements" required></textarea>
+
+      <h2>Skills</h2>
+      <input type="text" id="skills" placeholder="Skills (comma-separated)" required />
+
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput" class="resume-output"></div>
+
+    <div id="shareLink" class="share-link" style="display: none;">
+      <h3>Your Unique Resume Link</h3>
+      <input type="text" id="resumeLink" readonly />
+      <button id="copyLink">Copy Link</button>
+      <button id="downloadResume">Download Resume as PDF</button>
+    </div>
+  </div>
+
+  <script src="scripts.js" type="module"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>

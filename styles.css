@@ -1,0 +1,181 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 30px; /* Adding space around the page */
+}
+
+.container {
+    background-color: #333;
+    padding: 50px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 750px; /* Making the container a little wider for a clearer form */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* More prominent shadow for emphasis */
+    animation: fadeIn 1s ease-out;
+    border: 2px solid #444; /* Adding border for a more defined container */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px; /* Extra space before the title */
+    color: #fff;
+    font-size: 32px; /* Larger header text */
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 22px; /* Clear and larger subheaders */
+    margin-bottom: 15px; /* Adding more space below subheader */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Larger space between form elements */
+}
+
+input, textarea {
+    margin-bottom: 20px;
+    padding: 16px; /* More padding for larger inputs */
+    border: 2px solid #444; /* Thicker borders */
+    border-radius: 8px; /* Rounded corners for smoothness */
+    background-color: #555;
+    color: white;
+    font-size: 18px; /* Larger and clearer font size */
+    transition: all 0.3s ease;
+    width: 100%; /* Make inputs take full width */
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    background-color: #333;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px; /* Larger height for textareas */
+}
+
+button {
+    padding: 16px 25px; /* Larger button with more padding */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Button takes full width */
+    font-size: 20px; /* Clear and readable button text */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resume-output {
+    display: none;
+    margin-top: 50px;
+    padding: 40px; /* More padding for the output */
+    background-color: #444;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* Strong shadow around the output */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 750px; /* Wider output */
+    animation: fadeIn 1s ease-out;
+}
+
+.resume-output img {
+    width: 150px; /* Larger profile image */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-output h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger title in the resume output */
+}
+
+.resume-section {
+    margin-bottom: 25px;
+    font-size: 20px; /* Larger section titles */
+    color: #ddd; /* Light text for section names */
+}
+
+.resume-output p {
+    font-size: 18px; /* Larger text for resume content */
+    color: #ccc; /* Lighter content text */
+}
+
+.resume-output ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 18px;
+    color: #ccc; /* Clear and readable list items */
+}
+
+.resume-output .resume-section {
+    margin-bottom: 30px; /* More space between resume sections */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .container, .resume-output {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px; /* Smaller heading on mobile */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller subheader on mobile */
+    }
+
+    input, textarea {
+        font-size: 16px; /* Slightly smaller text on mobile */
+        padding: 14px;
+    }
+
+    button {
+        font-size: 18px; /* Smaller button on mobile */
+    }
+}
